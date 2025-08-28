@@ -1,0 +1,43 @@
+.move-up {
+  animation: moving-up 2s infinite alternate ease-in-out;
+}
+@keyframes moving-up {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.swiper-pagination-bullet{
+  background: #FFF5EE !important;
+}
+
+.swiper {
+  width: 100vw !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+.swiper-slide {
+  width: 100% !important;
+  max-width: 100% !important;
+
+}
+
+.bg-gradient-blue {
+  background-image: linear-gradient(135deg, #3a3f98, #2d6fc2, #2794d5);
+}
+.bg-gradient-green {
+  background-image: linear-gradient(135deg, #74BA4A, #40AB4D,#189249);
+}
+.bg-gradient-red {
+  background-image: linear-gradient(135deg, #F18B27, #E62156,#C12972);
+}
+
+
+

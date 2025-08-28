@@ -1,0 +1,9 @@
+.input {
+  &:focus,
+  &:focus-within {
+    outline: 0 !important;
+  }
+}
+.input:active {
+  background-color: white !important;
+}

@@ -1,0 +1,17 @@
+import { BsArrowRight } from "react-icons/bs";
+import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
+
+export default function FeatureProductsSection() {
+  return (
+    <div>
+      <div className=" bg-white text-black min-h-screen">
+        <div className="flex justify-between items-center w-full xl:px-12 lg:px-12 md:px-12 px-4">
+          <SectionTitle>Featured Products</SectionTitle>
+          <button className="btn btn-link link-hover btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-lg">
+            View All <BsArrowRight />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}

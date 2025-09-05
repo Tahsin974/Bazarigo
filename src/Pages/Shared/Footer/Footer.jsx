@@ -1,11 +1,11 @@
-import logo from "../../../assets/Logo/Bazarigo.svg"
+import logo from "../../../assets/Logo/Bazarigo.svg";
 export default function Footer() {
   return (
-    <footer className="footer sm:footer-horizontal bg-white text-black p-10 ">
+    <footer className="footer sm:footer-horizontal bg-[#F4F4F6] text-black p-10 ">
       <aside>
         <figure>
-                        <img src={logo} alt="brand-logo" height={50} width={120} />
-                      </figure>
+          <img src={logo} alt="brand-logo" height={50} width={120} />
+        </figure>
         <p>
           ACME Industries Ltd.
           <br />

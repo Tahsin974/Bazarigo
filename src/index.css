@@ -1,2 +1,18 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+.text-color {
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 2.5s infinite linear;
+}
+@keyframes animate-gradient {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}

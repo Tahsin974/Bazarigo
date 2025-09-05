@@ -4,9 +4,11 @@ import { FiMenu } from "react-icons/fi";
 import "./Navbar.css";
 import { FaHeart, FaRegUser } from "react-icons/fa";
 import { BsCart4 } from "react-icons/bs";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { BiSupport } from "react-icons/bi";
 export default function Navbar({ children }) {
   const menuRef = useRef(null);
+  const [handleCollapse, setHandleCollapse] = useState(false);
   const handleMenuButton = () => {
     if (menuRef.current) {
       menuRef.current.checked = false;
@@ -18,23 +20,95 @@ export default function Navbar({ children }) {
         <a>Home</a>
       </li>
       <li>
-        <a>Categories</a>
+        <a
+          onClick={() => setHandleCollapse(!handleCollapse)}
+          className="flex justify-between items-center cursor-pointer  font-bold hover:bg-gray-200"
+        >
+          <span>Categories</span>
+          <span className="text-lg">{handleCollapse ? "−" : "+"}</span>
+        </a>
+
+        <>
+          <ul
+            className={`overflow-hidden transition-all duration-600 ease-in-out font-semibold ${
+              handleCollapse ? "max-h-96" : "max-h-0"
+            }`}
+          >
+            <li>
+              <a
+                href="#"
+                className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
+              >
+                Men’s Fashion
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
+              >
+                Women’s Fashion
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
+              >
+                Electronics
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
+              >
+                Beauty & Health
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
+              >
+                Home & Living
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
+              >
+                Groceries
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
+              >
+                Sports & Outdoors
+              </a>
+            </li>
+          </ul>
+        </>
+      </li>
+
+      <li>
+        <a>Flash Sale</a>
       </li>
       <li>
-        <a>Deals</a>
+        <a>About Us</a>
       </li>
       <li>
-        <a>Brands</a>
-      </li>
-      <li>
-        <a>Support</a>
+        <a>Contact Us</a>
       </li>
     </>
   );
   const searchBar = (
     <>
       <li>
-        <label className="input rounded-3xl lg:w-xl xl:w-xl max-w-xl bg-white text-black   border border-black ">
+        <label className="input rounded-3xl lg:w-xl xl:w-xl md:w-xl  bg-white text-black   border border-black ">
           <input
             type="search"
             className="grow "
@@ -58,7 +132,7 @@ export default function Navbar({ children }) {
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
         <div className="xl:sticky lg:sticky fixed top-0 z-20 w-full ">
-          <div className=" flex justify-center items-center w-full xl:px-12 lg:px-12 md:px-12 px-4 py-4 bg-white text-black ">
+          <div className=" flex justify-center items-center w-full xl:px-12 lg:px-12 md:px-12 px-4 py-5 bg-white text-black ">
             <div className="navbar-start items-center gap-4">
               <label
                 htmlFor="my-drawer-3"
@@ -68,7 +142,7 @@ export default function Navbar({ children }) {
                 <FiMenu />
               </label>
               <figure>
-                <img src={logo} alt="brand-logo" height={50} width={120} />
+                <img src={logo} alt="brand-logo" height={75} width={150} />
               </figure>
             </div>
             <div className="navbar-center hidden xl:flex lg:flex">
@@ -78,27 +152,41 @@ export default function Navbar({ children }) {
             </div>
             <div className="navbar-end xl:gap-8 lg:gap-8 md:gap-6 sm:gap-5 gap-4">
               <div>
+                <BiSupport className="text-gray-600 xl:text-3xl lg:text-3xl md:text-2xl sm:text-xl text-lg" />
+              </div>
+              <div>
                 <div className="indicator">
-                  <FaHeart size={20} className="mt-1 text-gray-600" />
+                  <FaHeart className="mt-1 text-gray-600 xl:text-2xl lg:text-2xl md:text-xl sm:text-lg text-base" />
 
                   <span className="badge badge-xs indicator-item bg-red-600 border-0 text-white rounded-full">
                     8
                   </span>
                 </div>
               </div>
+
               <div>
-                <FaRegUser size={20} className="text-gray-600" />
+                <BsCart4 className="text-gray-600 xl:text-2xl lg:text-2xl md:text-xl sm:text-lg text-base" />
               </div>
-              <div>
-                <BsCart4 size={20} className="text-gray-600" />
+
+              <div className="dropdown dropdown-end">
+                <div tabIndex={0} role="button" className="cursor-pointer">
+                  <FaRegUser className="text-gray-600 xl:text-2xl lg:text-2xl md:text-xl sm:text-lg text-base" />
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="menu menu-sm dropdown-content bg-white text-black font-semibold  rounded-box z-1 mt-3 w-40 p-0 py-1 shadow "
+                >
+                  <li className="hover:bg-gray-100 ">
+                    <a className="text-sm">Profile</a>
+                  </li>
+                  <li className="hover:bg-gray-100 ">
+                    <a className="text-sm">Become Seller</a>
+                  </li>
+                  <li className="hover:bg-gray-100 ">
+                    <a className="text-sm">Logout</a>
+                  </li>
+                </ul>
               </div>
-            </div>
-          </div>
-          <div className="navbar bg-[#202044] text-white hidden lg:flex ">
-            <div className="mx-auto ">
-              <ul className="menu menu-horizontal px-1 text-lg font-semibold space-x-2.5">
-                {navOptions}
-              </ul>
             </div>
           </div>
         </div>
@@ -112,7 +200,7 @@ export default function Navbar({ children }) {
           className="drawer-overlay"
         ></label>
 
-        <ul className="menu bg-[#202044] text-white min-h-full w-80 p-4 space-y-1.5">
+        <ul className="menu bg-slate-200 text-black min-h-full w-80 p-4 space-y-1.5">
           <div className="flex justify-between items-center gap-4">
             <figure>
               <img src={logo} alt="brand-logo" height={50} width={120} />
@@ -125,7 +213,9 @@ export default function Navbar({ children }) {
             </button>
           </div>
           {/* Sidebar content here */}
-          {navOptions}
+          <ul className="menu menu-vertical px-1 text-lg font-bold space-x-2.5 py-1">
+            {navOptions}
+          </ul>
           {searchBar}
         </ul>
       </div>

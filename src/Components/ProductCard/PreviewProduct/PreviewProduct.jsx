@@ -1,3 +1,4 @@
+import { FaHeart } from "react-icons/fa";
 import img from "../../../assets/Products/iPhone 15 Pro Max.jpg";
 export default function PreviewProduct() {
   return (
@@ -10,9 +11,9 @@ export default function PreviewProduct() {
         {/* Product Details */}
         <div className="card-body">
           {/* product title */}
-          <h2 className="card-title">iPhone 15 Pro Max</h2>
+          <h2 className="text-xl font-bold">iPhone 15 Pro Max</h2>
           {/* product short description */}
-          <p>
+          <p className="text-base text-justify">
             {" "}
             Experience the ultimate iPhone with titanium design, A17 Pro chip,
             and advanced camera system.
@@ -26,7 +27,9 @@ export default function PreviewProduct() {
             {/* Add to Cart Button */}
             <button className="btn btn-primary flex-1">Add To Cart</button>
             {/* Preview Button */}
-            <button className="btn btn-info">👁️</button>
+            <button className="btn bg-[#FAF9F6] border-gray-400 ">
+              <FaHeart className="text-red-500 text-xl" />
+            </button>
           </div>
         </div>
       </div>

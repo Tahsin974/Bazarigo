@@ -7,3 +7,20 @@
 .input:active {
   background-color: white !important;
 }
+/* Remove default arrow */
+details summary {
+  list-style: none; /* Remove bullet/marker */
+}
+
+details summary::-webkit-details-marker {
+  display: none; /* Remove Chrome/Safari arrow */
+}
+
+details summary::marker {
+  content: none; /* Remove Firefox arrow */
+}
+
+/* Optional: cursor pointer */
+details summary {
+  cursor: pointer;
+}

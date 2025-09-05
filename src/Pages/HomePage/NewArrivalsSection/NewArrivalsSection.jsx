@@ -1,8 +1,9 @@
-import { BsArrowRight } from "react-icons/bs";
-import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
-import FeaturedProducts from "./FeaturedProducts/FeaturedProducts";
 import img from "../../../assets/Products/iPhone 15 Pro Max.jpg";
-export default function FeaturedProductsSection() {
+import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
+import { BsArrowRight } from "react-icons/bs";
+import NewProducts from "./NewProducts/NewProducts";
+
+export default function NewArrivalsSection() {
   const productDetailsData = [
     {
       id: 1,
@@ -162,19 +163,16 @@ export default function FeaturedProductsSection() {
       availability: "In Stock",
     },
   ];
-
   return (
-    <>
-      <section className=" bg-white xl:px-12 lg:px-12 md:px-12 px-4 xl:py-12 lg:py-12 md:py-12 py-4 text-black min-h-screen my-24 space-y-6">
-        {/* Section Title */}
+    <section className=" bg-white xl:px-12 lg:px-12 md:px-12 px-4 xl:py-12 lg:py-12 md:py-12 py-4 text-black h-[max-content] my-24 space-y-5">
+      {/* Section Title */}
 
-        <SectionTitle>Featured Products</SectionTitle>
+      <SectionTitle>New Arrivals</SectionTitle>
 
-        {/* Featured  Products */}
-        <div>
-          <FeaturedProducts products={productDetailsData} />
-        </div>
-      </section>
-    </>
+      {/* New Arrivals  Products */}
+      <div>
+        <NewProducts products={productDetailsData} />
+      </div>
+    </section>
   );
 }

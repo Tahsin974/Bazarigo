@@ -1,0 +1,21 @@
+.my-swiper-wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.product-Info {
+  background: rgba(60, 61, 61, 0.7);
+  backdrop-filter: blur(1px);
+}
+
+.card-animation .product-Info {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 1s linear 0.5s;
+}
+
+.card-animation:hover .product-Info {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out;
+}

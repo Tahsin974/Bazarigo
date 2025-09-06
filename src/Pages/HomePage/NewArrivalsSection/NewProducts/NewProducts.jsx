@@ -49,10 +49,22 @@ export default function NewProducts({ products }) {
                     className={`absolute rounded-lg top-0 h-full w-full ${styles["product-Info"]}`}
                   >
                     <div className="card-body text-white ">
-                      <h2 className="card-title">{product.name}</h2>
-                      <p>{product.description}</p>
+                      <h2
+                        style={{ fontFamily: "Poppins", fontWeight: 500 }}
+                        className="card-title"
+                      >
+                        {product.name}
+                      </h2>
+                      <p style={{ fontFamily: "Roboto", fontWeight: 400 }}>
+                        {product.description}
+                      </p>
                       <div className="card-actions justify-end absolute bottom-3 right-3">
-                        <button className="btn btn-primary">Buy Now</button>
+                        <button
+                          style={{ fontFamily: "Montserrat", fontWeight: 700 }}
+                          className="btn btn-primary"
+                        >
+                          Buy Now
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -62,7 +74,7 @@ export default function NewProducts({ products }) {
           ))}
         </Swiper>
         {/* <div className="flex justify-center mt-7">
-          <button className="btn btn-primary btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-lg">
+          <button style={{ fontFamily: "Montserrat", fontWeight: 700 }} className="btn btn-primary btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-lg">
             View All <BsArrowRight />
           </button>
         </div> */}
@@ -78,7 +90,7 @@ export default function NewProducts({ products }) {
           ))}
         </div>
         <div className="flex justify-center mt-7">
-          <button className="btn btn-primary btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-lg">
+          <button style={{ fontFamily: "Montserrat", fontWeight: 700 }} className="btn btn-primary btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-lg">
             View All <BsArrowRight />
           </button>
         </div>

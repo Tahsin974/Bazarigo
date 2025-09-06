@@ -1,13 +1,51 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-.text-color {
-  background-size: 200%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: animate-gradient 2.5s infinite linear;
+/* Montserrat */
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+/* Poppins */
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+/* Roboto */
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+/* Open-Sans */
+@font-face {
+  font-family: "Open-Sans";
+  src: url("./assets/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
 @keyframes animate-gradient {
   0% {
     background-position: 0%;
@@ -15,4 +53,15 @@
   100% {
     background-position: 200%;
   }
+}
+
+/* Gradient backgrounds */
+.bgGradientBlue {
+  background-image: linear-gradient(135deg, #3a3f98, #2d6fc2, #2794d5);
+}
+.bgGradientGreen {
+  background-image: linear-gradient(135deg, #74ba4a, #40ab4d, #189249);
+}
+.bgGradientRed {
+  background-image: linear-gradient(135deg, #f18b27, #e62156, #c12972);
 }

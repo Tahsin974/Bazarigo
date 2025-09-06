@@ -114,7 +114,10 @@ export default function Navbar({ children }) {
             className="grow "
             placeholder="Search for products..."
           />
-          <button className="btn bg-white border-none text-black rounded-r-full shadow-none btn-sm">
+          <button
+            style={{ fontFamily: "Montserrat", fontWeight: 700 }}
+            className="btn bg-white border-none text-black rounded-r-full shadow-none btn-sm"
+          >
             <IoSearch className="text-lg" />
           </button>
         </label>
@@ -206,6 +209,7 @@ export default function Navbar({ children }) {
               <img src={logo} alt="brand-logo" height={50} width={120} />
             </figure>
             <button
+              style={{ fontFamily: "Montserrat", fontWeight: 700 }}
               onClick={handleMenuButton}
               className="btn btn-circle bg-white text-black  "
             >
@@ -213,7 +217,10 @@ export default function Navbar({ children }) {
             </button>
           </div>
           {/* Sidebar content here */}
-          <ul className="menu menu-vertical px-1 text-lg font-bold space-x-2.5 py-1">
+          <ul
+            style={{ fontFamily: "Open-Sans", fontWeight: 700 }}
+            className="menu menu-vertical px-1 text-lg font-bold space-x-2.5 py-1"
+          >
             {navOptions}
           </ul>
           {searchBar}

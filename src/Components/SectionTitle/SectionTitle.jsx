@@ -3,7 +3,10 @@ import { TbShoppingBag } from "react-icons/tb";
 export default function SectionTitle({ children }) {
   return (
     <div className="text-center mb-10">
-      <h1 className="text-3xl  bg-gradient-to-r from-[#4cc0ff]  to-[#4679d8] bg-clip-text text-transparent font-bold relative inline-block pb-4">
+      <h1
+        style={{ fontFamily: "Montserrat", fontWeight: 700 }}
+        className="text-3xl  bg-gradient-to-r from-[#4cc0ff]  to-[#4679d8] bg-clip-text text-transparent font-bold relative inline-block pb-4"
+      >
         {children}
         {/* Underline with Icon */}
         <span className="block max-w-xs h-[4px] bg-gradient-to-r from-[#4cc0ff]  to-[#4679d8] mx-auto relative mt-7">

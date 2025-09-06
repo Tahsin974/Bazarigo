@@ -1,7 +1,14 @@
 import { BsArrowRight } from "react-icons/bs";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import FeaturedProducts from "./FeaturedProducts/FeaturedProducts";
-import img from "../../../assets/Products/iPhone 15 Pro Max.jpg";
+import img1 from "../../../assets/Products/BAJEAL T350 Luminous USB Keyboard & Mouse Set Computer Gaming Mechanical Feel Floating Rainbow Backli.jpg";
+import img2 from "../../../assets/Products/BAJEAL T350 Luminous USB Keyboard & Mouse Set Computer Gaming Mechanical Feel Floating Rainbow Backli.jpg";
+import img3 from "../../../assets/Products/BAJEAL T350 Luminous USB Keyboard & Mouse Set Computer Gaming Mechanical Feel Floating Rainbow Backli.jpg";
+import img4 from "../../../assets/Products/Chocolate High Quality Artificial Leather Wallet For Men - Wallet.jpg";
+import img5 from "../../../assets/Products/Streax Walnut Hair Serum -115ml.jpg";
+import img6 from "../../../assets/Products/BAJEAL T350 Luminous USB Keyboard & Mouse Set Computer Gaming Mechanical Feel Floating Rainbow Backli.jpg";
+import img7 from "../../../assets/Products/BAJEAL T350 Luminous USB Keyboard & Mouse Set Computer Gaming Mechanical Feel Floating Rainbow Backli.jpg";
+import img8 from "../../../assets/Products/BAJEAL T350 Luminous USB Keyboard & Mouse Set Computer Gaming Mechanical Feel Floating Rainbow Backli.jpg";
 export default function FeaturedProductsSection() {
   const productDetailsData = [
     {
@@ -18,7 +25,7 @@ export default function FeaturedProductsSection() {
         "48MP Triple Camera System",
         "iOS 17 with Enhanced Security",
       ],
-      image: img,
+      image: img1,
       rating: 4.9,
       reviews: 145,
       category: "Mobile Phones",
@@ -26,7 +33,7 @@ export default function FeaturedProductsSection() {
     },
     {
       id: 2,
-      name: "Samsung Galaxy S24 Ultra",
+      name: "Samsung Galaxy S24 Ultra S24 Ultra",
       price: 84999,
       description:
         "Samsung's flagship with massive storage, high refresh display, and pro camera features.",
@@ -37,7 +44,7 @@ export default function FeaturedProductsSection() {
         "120Hz Dynamic AMOLED Display",
         "Fast Charging & Wireless Charging",
       ],
-      image: img,
+      image: img2,
       rating: 4.8,
       reviews: 98,
       category: "Mobile Phones",
@@ -57,7 +64,7 @@ export default function FeaturedProductsSection() {
         "Lightweight Aluminum Body",
         "macOS Ventura pre-installed",
       ],
-      image: img,
+      image: img3,
       rating: 4.7,
       reviews: 60,
       category: "Laptops",
@@ -76,7 +83,7 @@ export default function FeaturedProductsSection() {
         "High-Resolution Audio Support",
         "Comfortable Over-ear Design",
       ],
-      image: img,
+      image: img4,
       rating: 4.6,
       reviews: 85,
       category: "Headphones",
@@ -96,7 +103,7 @@ export default function FeaturedProductsSection() {
         "Water Resistant up to 50m",
         "watchOS 10 with Fitness Tracking",
       ],
-      image: img,
+      image: img5,
       rating: 4.8,
       reviews: 40,
       category: "Smartwatches",
@@ -116,7 +123,7 @@ export default function FeaturedProductsSection() {
         "NVIDIA RTX 4070 Graphics",
         "Windows 11 Pro",
       ],
-      image: img,
+      image: img6,
       rating: 4.9,
       reviews: 52,
       category: "Laptops",
@@ -135,7 +142,7 @@ export default function FeaturedProductsSection() {
         "In-Body Image Stabilization",
         "Weather-Sealed Body",
       ],
-      image: img,
+      image: img7,
       rating: 4.8,
       reviews: 33,
       category: "Cameras",
@@ -155,7 +162,7 @@ export default function FeaturedProductsSection() {
         "Handheld & Docked Modes",
         "Wide Adjustable Stand",
       ],
-      image: img,
+      image: img8,
       rating: 4.7,
       reviews: 120,
       category: "Gaming Consoles",

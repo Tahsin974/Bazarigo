@@ -1,6 +1,6 @@
-import img from "../../../assets/Products/iPhone 15 Pro Max.jpg";
+import img from "../../../assets/Products/Radhuni Turmeric Powder & Chili Powder Combo Pack - 100gm Each.jpg";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
-import { BsArrowRight } from "react-icons/bs";
+
 import NewProducts from "./NewProducts/NewProducts";
 
 export default function NewArrivalsSection() {

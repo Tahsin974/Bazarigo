@@ -1,19 +1,25 @@
 export default function FlashSaleSection() {
   return (
     <>
-      <section className="hero bg-[#FF4C4C] text-white min-h-[80vh] my-24">
+      <section className="hero bgGradientRed text-white min-h-[80vh] my-24">
         <div className="hero-content text-center">
           <div className="max-w-md ">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-bold">
+            <h1
+              style={{ fontFamily: "Montserrat", fontWeight: 700 }}
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-bold"
+            >
               🔥 Flash Sale!
             </h1>
-            <p className="py-6 text-[18px]">
+            <p
+              style={{ fontFamily: "Roboto", fontWeight: 400 }}
+              className="py-6 text-[18px]"
+            >
               Limited time offers up to{" "}
               <span className="font-bold text-[#FCE100] text-xl">10% OFF</span>{" "}
               on top products! Don’t miss the best deals of the season — only
               valid for the next 24 hours.
             </p>
-            <div className="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-4 grid-cols-2 gap-4 text-center justify-items-center items-center py-8 max-w-sm mx-auto">
+            <div className="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-4 grid-cols-2 gap-4 text-center justify-items-center items-center py-8 max-w-md mx-auto">
               <div className="flex flex-col py-3 px-5 bg-[#FFF5EE] rounded-box text-[#FF4C4C]">
                 <span className="countdown font-mono text-5xl">
                   <span style={{ "--value": 0 }} aria-label="0 days">
@@ -48,7 +54,10 @@ export default function FlashSaleSection() {
               </div>
             </div>
 
-            <button className="btn bg-[#FFF5EE] border-[#FFF5EE] hover:bg-[#FFF5EE] hover:border-[#FFF5EE]   btn-sm md:btn-md lg:btn-lg xl:btn-xl rounded-full text-[#E62156]">
+            <button
+              style={{ fontFamily: "Montserrat", fontWeight: 700 }}
+              className="btn bg-[#FFF5EE] border-[#FFF5EE] hover:bg-[#FFF5EE] hover:border-[#FFF5EE]   btn-sm md:btn-md lg:btn-lg xl:btn-xl rounded-full text-[#E62156]"
+            >
               Shop Now
             </button>
           </div>

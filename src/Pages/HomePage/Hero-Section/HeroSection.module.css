@@ -17,17 +17,6 @@
   }
 }
 
-/* Gradient backgrounds */
-.bgGradientBlue {
-  background-image: linear-gradient(135deg, #3a3f98, #2d6fc2, #2794d5);
-}
-.bgGradientGreen {
-  background-image: linear-gradient(135deg, #74ba4a, #40ab4d, #189249);
-}
-.bgGradientRed {
-  background-image: linear-gradient(135deg, #f18b27, #e62156, #c12972);
-}
-
 /* Swiper styles (scoped only to this HeroSection) */
 .mySwiper :global(.swiper-pagination-bullet) {
   background: #fff5ee !important;

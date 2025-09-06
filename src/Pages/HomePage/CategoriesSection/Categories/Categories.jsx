@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
-import img from "../../../../assets/Products/img.jpg";
+import img1 from "../../../../assets/Catagory/Men’s-Fashion.webp";
+import img2 from "../../../../assets/Catagory/Women’s-Fashion.webp";
+import img3 from "../../../../assets/Catagory/Electronics.webp";
+import img4 from "../../../../assets/Catagory/Beauty-and-Health.webp";
+import img5 from "../../../../assets/Catagory/Home-and-Living.webp";
+import img6 from "../../../../assets/Catagory/Groceries.webp";
+import img7 from "../../../../assets/Catagory/Sports-and-Outdoors.webp";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -16,37 +22,37 @@ export default function Categories() {
       {
         id: 1,
         category: "Men’s Fashion",
-        img: img,
+        img: img1,
       },
       {
         id: 2,
         category: "Women’s Fashion",
-        img: img,
+        img: img2,
       },
       {
         id: 3,
         category: "Electronics",
-        img: img,
+        img: img3,
       },
       {
         id: 4,
         category: "Beauty & Health",
-        img: img,
+        img: img4,
       },
       {
         id: 5,
         category: "Home & Living",
-        img: img,
+        img: img5,
       },
       {
         id: 6,
         category: "Groceries",
-        img: img,
+        img: img6,
       },
       {
         id: 7,
         category: "Sports & Outdoors",
-        img: img,
+        img: img7,
       },
     ];
 
@@ -84,9 +90,12 @@ export default function Categories() {
                 alt={cat.category}
                 className="  rounded-2xl border mb-3"
               />
-              <p className="text-gray-700 font-bold text-center mt-auto">
+              <h4
+                style={{ fontFamily: "Montserrat", fontWeight: 700 }}
+                className="text-gray-700 font-bold text-center mt-auto"
+              >
                 {cat.category}
-              </p>
+              </h4>
             </div>
           </SwiperSlide>
         ))}

@@ -103,7 +103,7 @@ export default function Footer() {
 
           <div
             style={{ fontFamily: "Roboto", fontWeight: 400 }}
-            className="space-y-2 xl:text-sm lg:text-sm md:text-sm  text-xs"
+            className="space-y-2 "
           >
             <p className="flex items-center gap-2">
               📞{" "}
@@ -125,7 +125,7 @@ export default function Footer() {
 
           <ul
             style={{ fontFamily: "Roboto", fontWeight: 400 }}
-            className="mt-4 space-y-2 xl:text-sm lg:text-sm md:text-sm  text-xs"
+            className="mt-4 space-y-2 "
           >
             <li>
               <a href="#" className="link link-hover">

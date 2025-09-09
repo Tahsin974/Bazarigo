@@ -1,37 +1,167 @@
 import logo from "../../../assets/Logo/Bazarigo.svg";
+import facebook from "../../../assets/Footer/facebook.png";
+import instagram from "../../../assets/Footer/instagram.png";
+import youtube from "../../../assets/Footer/youtube.png";
+import nagad from "../../../assets/payments/nagad.png";
+import bKash from "../../../assets/payments/bkash.png";
+import rocket from "../../../assets/payments/rocket.jpeg";
+
 export default function Footer() {
   return (
-    <footer className="footer sm:footer-horizontal bg-[#F4F4F6] text-black p-10 ">
-      <aside>
-        <figure>
-          <img src={logo} alt="brand-logo" height={50} width={120} />
-        </figure>
-        <p>
-          ACME Industries Ltd.
-          <br />
-          Providing reliable tech since 1992
-        </p>
-      </aside>
-      <nav>
-        <h6 className="footer-title">Services</h6>
-        <a className="link link-hover">Branding</a>
-        <a className="link link-hover">Design</a>
-        <a className="link link-hover">Marketing</a>
-        <a className="link link-hover">Advertisement</a>
-      </nav>
-      <nav>
-        <h6 className="footer-title">Company</h6>
-        <a className="link link-hover">About us</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Jobs</a>
-        <a className="link link-hover">Press kit</a>
-      </nav>
-      <nav>
-        <h6 className="footer-title">Legal</h6>
-        <a className="link link-hover">Terms of use</a>
-        <a className="link link-hover">Privacy policy</a>
-        <a className="link link-hover">Cookie policy</a>
-      </nav>
-    </footer>
+    <div>
+      <footer className="xl:grid lg:grid flex flex-wrap  xl:grid-cols-4  lg:grid-cols-4  grid-cols-2 gap-y-6 xl:gap-x-6 lg:gap-x-6 gap-x-20 bg-[#F4F4F6] text-black xl:p-10 lg:p-10  md:p-10 py-10 px-4 border-b  border-gray-500 xl:justify-items-center lg:justify-items-center ">
+        <aside className="space-y-2  ">
+          <figure>
+            <img src={logo} alt="brand-logo" height={50} width={120} />
+          </figure>
+          <p style={{ fontFamily: "Roboto", fontWeight: 400 }}>
+            Shop with confidence, pay with ease, <br />
+            and enjoy fast delivery – only on Bazarigo.
+          </p>
+
+          {/* social links */}
+          <div className="flex gap-4 w-[max-context]  ">
+            <a>
+              <img src={facebook} alt="facebook logo" className="h-6 w-6" />
+            </a>
+
+            <a>
+              <img src={instagram} alt="instagram logo" className="h-6 w-6" />
+            </a>
+            <a>
+              <img src={youtube} alt="youtube  logo" className="h-6 " />
+            </a>
+          </div>
+        </aside>
+        <nav>
+          <ul style={{ fontFamily: "Roboto", fontWeight: 400 }}>
+            <h6
+              style={{ fontFamily: "Montserrat", fontWeight: 700 }}
+              className="mb-2 text-black  xl:text-base lg:text-base md:text-base text-sm"
+            >
+              Categories
+            </h6>
+            <li>
+              <a href="#" className="link link-hover">
+                Fashion
+              </a>
+            </li>
+            <li>
+              <a href="#" className="link link-hover">
+                Electronics
+              </a>
+            </li>
+            <li>
+              <a href="#" className="link link-hover">
+                Groceries
+              </a>
+            </li>
+            <li>
+              <a href="#" className="link link-hover">
+                Health & Beauty
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul style={{ fontFamily: "Roboto", fontWeight: 400 }}>
+            <h6
+              style={{ fontFamily: "Montserrat", fontWeight: 700 }}
+              className="mb-2 text-black xl:text-base lg:text-base md:text-base text-sm"
+            >
+              Quick Links
+            </h6>
+            <li>
+              <a href="#" className="link link-hover">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#" className="link link-hover">
+                About us
+              </a>
+            </li>
+            <li>
+              <a href="#" className="link link-hover">
+                Contact
+              </a>
+            </li>
+            <li>
+              <a href="#" className="link link-hover">
+                FAQ
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <h6
+            style={{ fontFamily: "Montserrat", fontWeight: 700 }}
+            className="mb-2 text-black xl:text-base lg:text-base md:text-base text-sm"
+          >
+            Customer Service
+          </h6>
+
+          <div
+            style={{ fontFamily: "Roboto", fontWeight: 400 }}
+            className="space-y-2 xl:text-sm lg:text-sm md:text-sm  text-xs"
+          >
+            <p className="flex items-center gap-2">
+              📞{" "}
+              <a href="tel:+8801797454118" className="hover:underline">
+                01797-454-118
+              </a>
+            </p>
+            <p className="flex items-center gap-2">
+              ✉{" "}
+              <a
+                href="mailto:bazarigo.official@gmail.com"
+                className="hover:underline"
+              >
+                bazarigo.official@gmail.com
+              </a>
+            </p>
+            <p className="text-sm">🕒 Support Hours: 9 AM – 5 PM (Everyday)</p>
+          </div>
+
+          <ul
+            style={{ fontFamily: "Roboto", fontWeight: 400 }}
+            className="mt-4 space-y-2 xl:text-sm lg:text-sm md:text-sm  text-xs"
+          >
+            <li>
+              <a href="#" className="link link-hover">
+                Returns & Refunds
+              </a>
+            </li>
+            <li>
+              <a href="#" className="link link-hover">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="#" className="link link-hover">
+                Terms & Conditions
+              </a>
+            </li>
+          </ul>
+
+          <div className="mt-4">
+            <p
+              style={{ fontFamily: "Montserrat", fontWeight: 700 }}
+              className="mb-2 xl:text-base lg:text-base md:text-base text-sm"
+            >
+              Payment Methods
+            </p>
+            <div className="flex gap-3">
+              <img src={bKash} alt="bKash" className="h-6" />
+              <img src={nagad} alt="Nagad" className="h-6" />
+              <img src={rocket} alt="Rocket" className="h-6" />
+            </div>
+          </div>
+        </nav>
+      </footer>
+      <footer className="footer bg-[#F4F4F6] text-black p-4 justify-center items-center font-semibold">
+        <p>© {new Date().getFullYear()} Bazarigo. All Rights Reserved.</p>
+      </footer>
+    </div>
   );
 }

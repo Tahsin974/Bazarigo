@@ -1,20 +1,22 @@
-import { BsArrowRight } from "react-icons/bs";
 import ProductCard from "../../../../Components/ProductCard/ProductCard";
+import styles from "./FeatureProducts.module.css";
 
 export default function FeaturedProducts({ products }) {
   return (
     <div>
-      <div className="grid lg:grid-cols-6 gap-5 justify-items-center">
+      <div
+        className={`${styles["card-container"]} grid  xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-2 gap-5 justify-items-center`}
+      >
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
-      <div className="flex justify-center mt-7">
+      <div className="flex xl:justify-end lg:justify-end md:justify-end justify-center  mt-7">
         <button
           style={{ fontFamily: "Montserrat", fontWeight: 700 }}
-          className="btn btn-primary btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-lg"
+          className="btn btn-outline  border-[#8ad15f] text-[#8ad15f] hover:bg-[#8ad15f] hover:text-white active:bg-[#8ad15f] active:text-white  btn-xs sm:btn-sm md:btn-md lg:btn-md xl:btn-md shadow-none"
         >
-          View All <BsArrowRight />
+          Explore More
         </button>
       </div>
     </div>

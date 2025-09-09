@@ -4,6 +4,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import "swiper/css";
+import img1 from "../../../assets/Hero-Section/Fashion.webp";
+import img2 from "../../../assets/Hero-Section/Health & Beauty.webp";
+import img3 from "../../../assets/Hero-Section/Home & Living.webp";
+import img4 from "../../../assets/Hero-Section/Electronics.webp";
+import img5 from "../../../assets/Hero-Section/Groceries.webp";
+import img6 from "../../../assets/Hero-Section/Sports & Outdoors.webp";
+import img7 from "../../../assets/Hero-Section/Toys & Kids.webp";
 
 import styles from "./HeroSection.module.css";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
@@ -17,7 +24,7 @@ export default function HeroSection() {
         speed={1200}
         effect={"fade"}
         autoplay={{
-          delay: 3500,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -28,130 +35,46 @@ export default function HeroSection() {
       >
         {/* Slide 1 */}
         <SwiperSlide>
-          <div
-            className={`hero bgGradientRed text-white h-[80vh] xl:py-16 lg:py-16 md:py-10 sm:py-8 py-4`}
-          >
-            <div className="hero-content text-center">
-              <div className="max-w-xl">
-                <h4
-                  className={`xl:text-6xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-bold py-8 ${styles.moveUp}`}
-                >
-                  👋
-                </h4>
-                <h5
-                  style={{ fontFamily: "Montserrat", fontWeight: 700 }}
-                  className="xl:text-5xl lg:text-5xl text-2xl sm:text-3xl md:text-4xl font-bold"
-                >
-                  Welcome To Bazarigo
-                </h5>
-                <h4
-                  style={{ fontFamily: "Roboto", fontWeight: 400 }}
-                  className="xl:text-2xl lg:text-2xl text-base sm:text-lg md:text-xl py-6"
-                >
-                  Your trusted marketplace for everything you love
-                </h4>
-                <div className="flex justify-center items-center gap-5">
-                  <button
-                    style={{ fontFamily: "Montserrat", fontWeight: 700 }}
-                    className="btn bg-[#FFF5EE] border-[#FFF5EE] hover:bg-[#FFF5EE] hover:border-[#FFF5EE] btn-sm md:btn-md lg:btn-lg xl:btn-xl rounded-full font-bold text-[#E62156]"
-                  >
-                    Shop Now
-                  </button>
-                  <button
-                    style={{ fontFamily: "Montserrat", fontWeight: 700 }}
-                    className="btn border-[#FFF5EE] hover:bg-[#FFF5EE] hover:border-[#FFF5EE] btn-outline btn-sm md:btn-md lg:btn-lg xl:btn-xl rounded-full font-bold hover:text-[#E62156]"
-                  >
-                    Learn More
-                  </button>
-                </div>
-              </div>
-            </div>
+          <div className={`${styles["image-wrapper"]} w-full`}>
+            <img src={img1} className="h-full w-full" />
           </div>
         </SwiperSlide>
 
         {/* Slide 2 */}
         <SwiperSlide>
-          <div
-            className={`hero bgGradientBlue text-white h-[80vh] xl:py-16 lg:py-16 md:py-10 sm:py-8 py-4`}
-          >
-            <div className="hero-content text-center">
-              <div className="max-w-xl">
-                <h4
-                  className={`xl:text-6xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-bold py-8 ${styles.moveUp}`}
-                >
-                  🛒
-                </h4>
-                <h5
-                  style={{ fontFamily: "Montserrat", fontWeight: 700 }}
-                  className="xl:text-5xl lg:text-5xl text-2xl sm:text-3xl md:text-4xl font-bold"
-                >
-                  Shop With Confidence
-                </h5>
-                <h4
-                  style={{ fontFamily: "Roboto", fontWeight: 400 }}
-                  className="xl:text-2xl lg:text-2xl text-base sm:text-lg md:text-xl py-6"
-                >
-                  Secure shopping, fast delivery, easy returns
-                </h4>
-                <div className="flex justify-center items-center gap-5">
-                  <button
-                    style={{ fontFamily: "Montserrat", fontWeight: 700 }}
-                    className="btn bg-[#FFF5EE] border-[#FFF5EE] hover:bg-[#FFF5EE] hover:border-[#FFF5EE] btn-sm md:btn-md lg:btn-lg xl:btn-xl rounded-full font-bold text-[#2d6fc2]"
-                  >
-                    Shop Now
-                  </button>
-                  <button
-                    style={{ fontFamily: "Montserrat", fontWeight: 700 }}
-                    className="btn border-[#FFF5EE] hover:bg-[#FFF5EE] hover:border-[#FFF5EE] btn-outline btn-sm md:btn-md lg:btn-lg xl:btn-xl rounded-full font-bold hover:text-[#2d6fc2]"
-                  >
-                    Learn More
-                  </button>
-                </div>
-              </div>
-            </div>
+          <div className={`${styles["image-wrapper"]} w-full`}>
+            <img src={img2} className="h-full w-full" />
           </div>
         </SwiperSlide>
 
         {/* Slide 3 */}
         <SwiperSlide>
-          <div
-            className={`hero bgGradientGreen text-white h-[80vh] xl:py-16 lg:py-16 md:py-10 sm:py-8 py-4`}
-          >
-            <div className="hero-content text-center max-w-[1280px] mx-auto px-4">
-              <div className="max-w-xl">
-                <h4
-                  className={`xl:text-6xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-bold py-8 ${styles.moveUp}`}
-                >
-                  📦
-                </h4>
-                <h5
-                  style={{ fontFamily: "Montserrat", fontWeight: 700 }}
-                  className="xl:text-5xl lg:text-5xl text-2xl sm:text-3xl md:text-4xl font-bold"
-                >
-                  Everything You Need
-                </h5>
-                <h4
-                  style={{ fontFamily: "Roboto", fontWeight: 400 }}
-                  className="xl:text-2xl lg:text-2xl text-base sm:text-lg md:text-xl py-6"
-                >
-                  From groceries to gadgets — all in one place
-                </h4>
-                <div className="flex justify-center items-center gap-5">
-                  <button
-                    style={{ fontFamily: "Montserrat", fontWeight: 700 }}
-                    className="btn bg-[#FFF5EE] border-[#FFF5EE] hover:bg-[#FFF5EE] hover:border-[#FFF5EE] btn-sm md:btn-md lg:btn-lg xl:btn-xl rounded-full font-bold text-[#40AB4D]"
-                  >
-                    Shop Now
-                  </button>
-                  <button
-                    style={{ fontFamily: "Montserrat", fontWeight: 700 }}
-                    className="btn border-[#FFF5EE] hover:bg-[#FFF5EE] hover:border-[#FFF5EE] btn-outline btn-sm md:btn-md lg:btn-lg xl:btn-xl rounded-full font-bold hover:text-[#40AB4D]"
-                  >
-                    Learn More
-                  </button>
-                </div>
-              </div>
-            </div>
+          <div className={`${styles["image-wrapper"]} w-full`}>
+            <img src={img3} className="h-full w-full" />
+          </div>
+        </SwiperSlide>
+        {/* Slide 4 */}
+        <SwiperSlide>
+          <div className={`${styles["image-wrapper"]} w-full`}>
+            <img src={img4} className="h-full w-full" />
+          </div>
+        </SwiperSlide>
+        {/* Slide 5 */}
+        <SwiperSlide>
+          <div className={`${styles["image-wrapper"]} w-full`}>
+            <img src={img5} className="h-full w-full" />
+          </div>
+        </SwiperSlide>
+        {/* Slide 6 */}
+        <SwiperSlide>
+          <div className={`${styles["image-wrapper"]} w-full`}>
+            <img src={img6} className="h-full w-full" />
+          </div>
+        </SwiperSlide>
+        {/* Slide 7 */}
+        <SwiperSlide>
+          <div className={`${styles["image-wrapper"]} w-full`}>
+            <img src={img7} className="h-full w-full" />
           </div>
         </SwiperSlide>
       </Swiper>

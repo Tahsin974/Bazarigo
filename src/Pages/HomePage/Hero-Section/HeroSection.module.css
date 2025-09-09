@@ -32,3 +32,43 @@
   width: 100% !important;
   max-width: 100% !important;
 }
+
+.image-wrapper {
+  height: 30vh;
+}
+@media only screen and (min-width: 360px) and (max-width: 379px) {
+  .image-wrapper {
+    height: 30vh;
+  }
+}
+@media only screen and (min-width: 380px) and (max-width: 423px) {
+  .image-wrapper {
+    height: 30vh;
+  }
+}
+@media only screen and (min-width: 425px) and (max-width: 479px) {
+  .image-wrapper {
+    height: 40vh;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 639px) {
+  .image-wrapper {
+    height: 50vh;
+  }
+}
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+  .image-wrapper {
+    height: 60vh;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .image-wrapper {
+    height: 80vh;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .image-wrapper {
+    height: 100vh;
+  }
+}

@@ -4,6 +4,7 @@ import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import styles from "./NewProducts.module.css";
+import { TbCurrencyTaka } from "react-icons/tb";
 
 export default function NewProducts({ products }) {
   return (
@@ -19,6 +20,8 @@ export default function NewProducts({ products }) {
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
+          onTouchStart={(swiper) => swiper.autoplay.stop()} // pause on touch (mobile)
+          onTouchEnd={(swiper) => swiper.autoplay.start()} // resume after touch release
           breakpoints={{
             580: {
               slidesPerView: 2,
@@ -38,12 +41,14 @@ export default function NewProducts({ products }) {
         >
           {products.map((product) => (
             <SwiperSlide key={product.id}>
-              <div className="card cursor-pointer bg-white max-w-96  shadow-lg rounded-lg">
-                <figure className={`relative ${styles["card-animation"]}`}>
+              <div className="card cursor-pointer bg-white max-w-96  shadow-lg rounded-lg overflow-hidden group p-1.5 border border-gray-400 m-0">
+                <figure
+                  className={`relative ${styles["card-animation"]} overflow-hidden  rounded-lg`}
+                >
                   <img
                     src={product.image}
                     alt="products"
-                    className="rounded-lg"
+                    className="rounded-lg "
                   />
                   <div
                     className={`absolute rounded-lg top-0 h-full w-full ${styles["product-Info"]}`}
@@ -51,17 +56,19 @@ export default function NewProducts({ products }) {
                     <div className="card-body text-white ">
                       <h2
                         style={{ fontFamily: "Poppins", fontWeight: 500 }}
-                        className="card-title"
+                        className="text-[18px] font-semibold  absolute bottom-16 w-[170px] truncate"
                       >
                         {product.name}
                       </h2>
-                      <p style={{ fontFamily: "Roboto", fontWeight: 400 }}>
-                        {product.description}
-                      </p>
+
+                      <h5 className=" font-bold text-lg flex items-center absolute bottom-4.5 left-3">
+                        <TbCurrencyTaka className="text-white" />{" "}
+                        {product.price.toLocaleString("en-IN")}
+                      </h5>
                       <div className="card-actions justify-end absolute bottom-3 right-3">
                         <button
                           style={{ fontFamily: "Montserrat", fontWeight: 700 }}
-                          className="btn btn-primary"
+                          className="btn btn-outline  border-[#8ad15f] text-[#8ad15f] hover:bg-[#8ad15f]/75 hover:text-white active:bg-[#8ad15f]/75 active:text-white btn-xs sm:btn-sm md:btn-md lg:btn-md xl:btn-md shadow-none rounded-2xl"
                         >
                           Buy Now
                         </button>

@@ -164,7 +164,7 @@ export default function NewArrivalsSection() {
     },
   ];
   return (
-    <section className=" bg-white xl:px-12 lg:px-12 md:px-12 px-4 xl:py-12 lg:py-12 md:py-12 py-4 text-black h-[max-content] my-24 space-y-5">
+    <section className=" bg-white xl:px-12 lg:px-12 md:px-12 px-2 xl:py-12 lg:py-12 md:py-12 py-4 text-black h-[max-content] xl:mt-16 lg:mt-16 md:mt-15 sm:mt-14 mt-12 space-y-2">
       {/* Section Title */}
 
       <SectionTitle>New Arrivals</SectionTitle>

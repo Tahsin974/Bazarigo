@@ -39,15 +39,7 @@ export default function Navbar({ children }) {
                 href="#"
                 className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
               >
-                Men’s Fashion
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
-              >
-                Women’s Fashion
+                Books & Stationery
               </a>
             </li>
             <li>
@@ -63,15 +55,7 @@ export default function Navbar({ children }) {
                 href="#"
                 className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
               >
-                Beauty & Health
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
-              >
-                Home & Living
+                Fashion
               </a>
             </li>
             <li>
@@ -87,7 +71,31 @@ export default function Navbar({ children }) {
                 href="#"
                 className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
               >
+                Health & Beauty
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
+              >
+                Home & Living
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
+              >
                 Sports & Outdoors
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
+              >
+                Toys & Kids
               </a>
             </li>
           </ul>
@@ -134,8 +142,8 @@ export default function Navbar({ children }) {
       />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="xl:sticky lg:sticky fixed top-0 z-20 w-full ">
-          <div className=" flex justify-center items-center w-full xl:px-12 lg:px-12 md:px-12 px-4 py-5 bg-white text-black ">
+        <div className="sticky  top-0 z-20 w-full ">
+          <div className=" flex justify-center items-center w-full xl:px-12 lg:px-12 md:px-12 px-4 py-4 bg-white text-black ">
             <div className="navbar-start items-center gap-4">
               <label
                 htmlFor="my-drawer-3"

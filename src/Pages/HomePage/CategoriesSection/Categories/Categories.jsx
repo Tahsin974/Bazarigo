@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import img1 from "../../../../assets/Catagory/Men’s-Fashion.webp";
-import img2 from "../../../../assets/Catagory/Women’s-Fashion.webp";
-import img3 from "../../../../assets/Catagory/Electronics.webp";
-import img4 from "../../../../assets/Catagory/Beauty-and-Health.webp";
-import img5 from "../../../../assets/Catagory/Home-and-Living.webp";
-import img6 from "../../../../assets/Catagory/Groceries.webp";
-import img7 from "../../../../assets/Catagory/Sports-and-Outdoors.webp";
+import img1 from "../../../../assets/Catagory/Books & Stationery.webp";
+import img2 from "../../../../assets/Catagory/Electronics.webp";
+import img3 from "../../../../assets/Catagory/Fashion.webp";
+import img4 from "../../../../assets/Catagory/Groceries.webp";
+import img5 from "../../../../assets/Catagory/Health & Beauty.webp";
+import img6 from "../../../../assets/Catagory/Home & Living.webp";
+import img7 from "../../../../assets/Catagory/Sports & Outdoors.webp";
+import img8 from "../../../../assets/Catagory/Toys & Kids.webp";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -21,38 +22,44 @@ export default function Categories() {
     const mockCategories = [
       {
         id: 1,
-        category: "Men’s Fashion",
+        category: "Books & Stationery",
         img: img1,
       },
       {
         id: 2,
-        category: "Women’s Fashion",
+        category: "Electronics",
         img: img2,
       },
       {
         id: 3,
-        category: "Electronics",
+        category: "Fashion",
         img: img3,
       },
       {
         id: 4,
-        category: "Beauty & Health",
+        category: "Groceries",
         img: img4,
       },
       {
         id: 5,
-        category: "Home & Living",
+        category: "Health & Beauty",
         img: img5,
       },
       {
         id: 6,
-        category: "Groceries",
+        category: "Home & Living",
         img: img6,
       },
+
       {
         id: 7,
         category: "Sports & Outdoors",
         img: img7,
+      },
+      {
+        id: 8,
+        category: "Toys & Kids",
+        img: img8,
       },
     ];
 
@@ -83,7 +90,7 @@ export default function Categories() {
           <SwiperSlide key={cat.id}>
             <div
               key={cat.id}
-              className="flex flex-col items-center p-2 bg-white rounded-2xl shadow-md hover:shadow-lg transition cursor-pointer  border border-gray-400 "
+              className="flex flex-col items-center p-2 bg-white rounded-2xl  hover:shadow-md transition cursor-pointer  border border-gray-400 shadow-[#71c8f0]"
             >
               <img
                 src={cat.img}

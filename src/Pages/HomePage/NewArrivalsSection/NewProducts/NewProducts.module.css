@@ -1,11 +1,19 @@
 .my-swiper-wrapper {
   padding-top: 0px;
   padding-bottom: 20px;
+  margin-inline: auto;
 }
 
 .product-Info {
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(1px);
+}
+
+.my-card {
+  height: 320px;
+}
+.my-card img {
+  height: 320px;
 }
 
 .card-animation .product-Info {
@@ -24,4 +32,11 @@
 }
 .card-animation:hover img {
   transform: scale(1.25);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 361px) {
+  .my-swiper-wrapper {
+    max-width: 200px;
+    margin-inline: auto;
+  }
 }

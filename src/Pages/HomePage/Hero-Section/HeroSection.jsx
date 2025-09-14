@@ -10,7 +10,10 @@ import img3 from "../../../assets/Hero-Section/Home & Living.webp";
 import img4 from "../../../assets/Hero-Section/Electronics.webp";
 import img5 from "../../../assets/Hero-Section/Groceries.webp";
 import img6 from "../../../assets/Hero-Section/Sports & Outdoors.webp";
-import img7 from "../../../assets/Hero-Section/Toys & Kids.webp";
+import img7 from "../../../assets/Hero-Section/Electronics 2.webp";
+import img8 from "../../../assets/Hero-Section/Fashion 2.webp";
+import img9 from "../../../assets/Hero-Section/Health & Beauty 2.webp";
+import img10 from "../../../assets/Hero-Section/Toys & Kids.webp";
 
 import styles from "./HeroSection.module.css";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
@@ -75,6 +78,24 @@ export default function HeroSection() {
         <SwiperSlide>
           <div className={`${styles["image-wrapper"]} w-full`}>
             <img src={img7} className="h-full w-full" />
+          </div>
+        </SwiperSlide>
+        {/* Slide 8 */}
+        <SwiperSlide>
+          <div className={`${styles["image-wrapper"]} w-full`}>
+            <img src={img8} className="h-full w-full" />
+          </div>
+        </SwiperSlide>
+        {/* Slide 9 */}
+        <SwiperSlide>
+          <div className={`${styles["image-wrapper"]} w-full`}>
+            <img src={img9} className="h-full w-full" />
+          </div>
+        </SwiperSlide>
+        {/* Slide 10 */}
+        <SwiperSlide>
+          <div className={`${styles["image-wrapper"]} w-full`}>
+            <img src={img10} className="h-full w-full" />
           </div>
         </SwiperSlide>
       </Swiper>

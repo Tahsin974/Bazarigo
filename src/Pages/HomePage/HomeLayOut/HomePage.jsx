@@ -10,8 +10,8 @@ export default function HomePage() {
       <HeroSection />
       <FlashSaleSection />
       <CategoriesSection />
-      <FeaturedProductsSection />
       <NewArrivalsSection />
+      <FeaturedProductsSection />
     </div>
   );
 }

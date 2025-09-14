@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import ProductCard from "../../../../Components/ProductCard/ProductCard";
 import styles from "./FeatureProducts.module.css";
 
@@ -8,7 +9,9 @@ export default function FeaturedProducts({ products }) {
         className={`${styles["card-container"]} grid  xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-2 gap-5 justify-items-center`}
       >
         {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <Link to={`/product-details/${product.id}`} key={product.id}>
+            <ProductCard product={product} />
+          </Link>
         ))}
       </div>
       <div className="flex xl:justify-end lg:justify-end md:justify-end justify-center  mt-7">

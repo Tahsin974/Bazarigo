@@ -1,39 +1,63 @@
 .wrapper {
   height: max-content;
 }
+.countdown-container {
+  width: 70%;
+}
 @media only screen and (min-width: 360px) and (max-width: 379px) {
   .wrapper {
     height: 35vh;
+  }
+  .countdown-container {
+    width: 70%;
   }
 }
 @media only screen and (min-width: 380px) and (max-width: 423px) {
   .wrapper {
     height: 35vh;
   }
+  .countdown-container {
+    width: 70%;
+  }
 }
 @media only screen and (min-width: 425px) and (max-width: 479px) {
   .wrapper {
-    height: 35vh;
+    height: 40vh;
+  }
+  .countdown-container {
+    width: 60%;
   }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 639px) {
   .wrapper {
-    height: 35vh;
+    height: 50vh;
+  }
+  .countdown-container {
+    width: 50%;
   }
 }
 @media only screen and (min-width: 640px) and (max-width: 767px) {
   .wrapper {
-    height: max-content;
+    height: 60vh;
+  }
+  .countdown-container {
+    width: 40%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .wrapper {
-    height: max-content;
+    height: 80vh;
+  }
+  .countdown-container {
+    width: 50%;
   }
 }
 @media only screen and (min-width: 1024px) {
   .wrapper {
-    height: max-content;
+    height: 80vh;
+  }
+  .countdown-container {
+    width: 70%;
   }
 }

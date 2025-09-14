@@ -12,7 +12,7 @@ export default function NewProducts({ products }) {
       <div>
         <Swiper
           slidesPerView={1}
-          spaceBetween={10}
+          spaceBetween={20}
           speed={1200}
           loop={true}
           autoplay={{
@@ -23,16 +23,40 @@ export default function NewProducts({ products }) {
           onTouchStart={(swiper) => swiper.autoplay.stop()} // pause on touch (mobile)
           onTouchEnd={(swiper) => swiper.autoplay.start()} // resume after touch release
           breakpoints={{
-            580: {
+            362: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+            380: {
               slidesPerView: 2,
               spaceBetween: 30,
             },
-            768: {
+            450: {
               slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            580: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            918: {
+              slidesPerView: 3,
+              spaceBetween: 10,
+            },
+            920: {
+              slidesPerView: 4,
               spaceBetween: 40,
             },
-            1024: {
-              slidesPerView: 4,
+            1280: {
+              slidesPerView: 6,
+              spaceBetween: 20,
+            },
+            1440: {
+              slidesPerView: 6,
+              spaceBetween: 20,
+            },
+            2000: {
+              slidesPerView: 6,
               spaceBetween: 20,
             },
           }}
@@ -41,9 +65,11 @@ export default function NewProducts({ products }) {
         >
           {products.map((product) => (
             <SwiperSlide key={product.id}>
-              <div className="card cursor-pointer bg-white max-w-96  shadow-lg rounded-lg overflow-hidden group p-1.5 border border-gray-400 m-0">
+              <div
+                className={`card cursor-pointer bg-white  shadow-lg rounded-lg overflow-hidden group p-1.5 border border-gray-400 m-0   ${styles["my-card"]}`}
+              >
                 <figure
-                  className={`relative ${styles["card-animation"]} overflow-hidden  rounded-lg`}
+                  className={`relative   ${styles["card-animation"]} overflow-hidden  rounded-lg `}
                 >
                   <img
                     src={product.image}
@@ -56,19 +82,19 @@ export default function NewProducts({ products }) {
                     <div className="card-body text-white ">
                       <h2
                         style={{ fontFamily: "Poppins", fontWeight: 500 }}
-                        className="text-[18px] font-semibold  absolute bottom-16 w-[170px] truncate"
+                        className="text-[16px] font-semibold  absolute bottom-14 left-2 w-[170px] truncate"
                       >
                         {product.name}
                       </h2>
 
-                      <h5 className=" font-bold text-lg flex items-center absolute bottom-4.5 left-3">
+                      <h5 className=" font-bold text-[16.5px] flex items-center absolute bottom-4.5 left-2">
                         <TbCurrencyTaka className="text-white" />{" "}
                         {product.price.toLocaleString("en-IN")}
                       </h5>
-                      <div className="card-actions justify-end absolute bottom-3 right-3">
+                      <div className="card-actions justify-end absolute bottom-4 right-1.5">
                         <button
                           style={{ fontFamily: "Montserrat", fontWeight: 700 }}
-                          className="btn btn-outline  border-[#8ad15f] text-[#8ad15f] hover:bg-[#8ad15f]/75 hover:text-white active:bg-[#8ad15f]/75 active:text-white btn-xs sm:btn-sm md:btn-md lg:btn-md xl:btn-md shadow-none rounded-2xl"
+                          className="btn btn-outline  border-[#8ad15f] text-[#8ad15f] hover:bg-[#8ad15f]/75 hover:text-white active:bg-[#8ad15f]/75 active:text-white btn-sm  shadow-none rounded-2xl"
                         >
                           Buy Now
                         </button>

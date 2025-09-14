@@ -1,11 +1,12 @@
-import { IoCloseOutline, IoSearch } from "react-icons/io5";
+import { IoCloseOutline, IoNotifications, IoSearch } from "react-icons/io5";
 import logo from "../../../assets/Logo/Bazarigo.svg";
 import { FiMenu } from "react-icons/fi";
 import "./Navbar.css";
-import { FaHeart, FaRegUser } from "react-icons/fa";
+import { FaRegUser } from "react-icons/fa";
 import { BsCart4 } from "react-icons/bs";
 import { useRef, useState } from "react";
 import { BiSupport } from "react-icons/bi";
+import { Link } from "react-router";
 export default function Navbar({ children }) {
   const menuRef = useRef(null);
   const [handleCollapse, setHandleCollapse] = useState(false);
@@ -153,7 +154,9 @@ export default function Navbar({ children }) {
                 <FiMenu />
               </label>
               <figure>
-                <img src={logo} alt="brand-logo" height={75} width={150} />
+                <Link to="/">
+                  <img src={logo} alt="brand-logo" height={75} width={150} />
+                </Link>
               </figure>
             </div>
             <div className="navbar-center hidden xl:flex lg:flex">
@@ -167,7 +170,7 @@ export default function Navbar({ children }) {
               </div>
               <div>
                 <div className="indicator">
-                  <FaHeart className="mt-1 text-gray-600 xl:text-2xl lg:text-2xl md:text-xl sm:text-lg text-base" />
+                  <IoNotifications className="mt-1 text-gray-600 xl:text-2xl lg:text-2xl md:text-xl sm:text-lg text-base" />
 
                   <span className="badge badge-xs indicator-item bg-red-600 border-0 text-white rounded-full">
                     8

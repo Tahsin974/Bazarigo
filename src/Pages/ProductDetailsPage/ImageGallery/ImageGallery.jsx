@@ -9,13 +9,13 @@ export default function ImageGallery() {
   const [mainImage, setMainImage] = useState(images[0]);
 
   return (
-    <div>
+    <div className="space-y-6">
       <img
         src={mainImage}
         alt="Product"
-        className="w-full h-auto rounded-xl shadow-md"
+        className="w-full h-auto rounded-xl shadow-md border border-gray-400"
       />
-      <div className="flex space-x-3 mt-4">
+      <div className="flex space-x-3 ">
         {images.map((img, idx) => (
           <img
             key={idx}

@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import styles from "./NewProducts.module.css";
 import { TbCurrencyTaka } from "react-icons/tb";
+import { HashLink } from "react-router-hash-link";
 
 export default function NewProducts({ products }) {
   return (
@@ -23,7 +24,7 @@ export default function NewProducts({ products }) {
           onTouchStart={(swiper) => swiper.autoplay.stop()} // pause on touch (mobile)
           onTouchEnd={(swiper) => swiper.autoplay.start()} // resume after touch release
           breakpoints={{
-            362: {
+            360: {
               slidesPerView: 2,
               spaceBetween: 10,
             },
@@ -91,13 +92,18 @@ export default function NewProducts({ products }) {
                         <TbCurrencyTaka className="text-white" />{" "}
                         {product.price.toLocaleString("en-IN")}
                       </h5>
-                      <div className="card-actions justify-end absolute bottom-4 right-1.5">
-                        <button
-                          style={{ fontFamily: "Montserrat", fontWeight: 700 }}
-                          className="btn btn-outline  border-[#8ad15f] text-[#8ad15f] hover:bg-[#8ad15f]/75 hover:text-white active:bg-[#8ad15f]/75 active:text-white btn-sm  shadow-none rounded-2xl"
-                        >
-                          Buy Now
-                        </button>
+                      <div className="card-actions justify-end absolute bottom-4.5 right-1.5">
+                        <HashLink to={`/product-details/${product.id}#`}>
+                          <button
+                            style={{
+                              fontFamily: "Montserrat",
+                              fontWeight: 700,
+                            }}
+                            className="btn btn-outline  border-[#8ad15f] text-[#8ad15f] hover:bg-[#8ad15f]/75 hover:text-white active:bg-[#8ad15f]/75 active:text-white btn-xs  shadow-none rounded-2xl"
+                          >
+                            Buy Now
+                          </button>
+                        </HashLink>
                       </div>
                     </div>
                   </div>

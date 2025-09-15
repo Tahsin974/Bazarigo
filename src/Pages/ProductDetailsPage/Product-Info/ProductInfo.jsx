@@ -1,16 +1,28 @@
 import { useState } from "react";
+import { TbCurrencyTaka } from "react-icons/tb";
 
 export default function ProductInfo() {
   const [size, setSize] = useState("M");
   const [quantity, setQuantity] = useState(1);
 
   return (
-    <div className="space-y-6">
-      <h1 className="text-3xl font-bold text-gray-900">
+    <div className="space-y-6 text-black">
+      <h1
+        style={{ fontFamily: "Poppins", fontWeight: 500 }}
+        className="xl:text-3xl lg:text-3xl md:text-2xl sm:text-xl text-lg font-bold "
+      >
         Premium Cotton Hoodie
       </h1>
-      <p className="text-xl text-blue-600 font-semibold">$59.99</p>
-      <p className="text-gray-600">
+      <h3 className="bg-gradient-to-r from-[#4cc0ff]  to-[#4679d8] bg-clip-text text-transparent font-bold  xl:text-xl lg:text-xl md:text-xl sm:text-lg text-base flex items-center ">
+        <span>
+          <TbCurrencyTaka className="text-[#4679d8]" />
+        </span>{" "}
+        <span>59.99</span>
+      </h3>
+      <p
+        style={{ fontFamily: "Roboto", fontWeight: 400 }}
+        className="text-gray-600 xl:text-base lg:text-base md:text-base text-sm "
+      >
         A stylish, comfortable hoodie perfect for any season.
       </p>
 
@@ -54,7 +66,13 @@ export default function ProductInfo() {
 
       {/* Add to Cart */}
       <button className="bg-blue-600 text-white px-6 py-3 rounded-lg w-full font-semibold hover:bg-blue-700">
-        Add to Cart
+        Add To Cart
+      </button>
+      <button className="bg-blue-600 text-white px-6 py-3 rounded-lg w-full font-semibold hover:bg-blue-700">
+        Buy Now
+      </button>
+      <button className="bg-blue-600 text-white px-6 py-3 rounded-lg w-full font-semibold hover:bg-blue-700">
+        Add To Wishlist
       </button>
     </div>
   );

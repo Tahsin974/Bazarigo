@@ -4,21 +4,20 @@ import { FiMenu } from "react-icons/fi";
 import "./Navbar.css";
 import { FaRegUser } from "react-icons/fa";
 import { BsCart4 } from "react-icons/bs";
-import { useRef, useState } from "react";
-import { BiSupport } from "react-icons/bi";
+import { useEffect, useRef, useState } from "react";
+// import { BiSupport } from "react-icons/bi";
 import { Link } from "react-router";
+import { HashLink } from "react-router-hash-link";
+import { useLocation } from "react-router";
 export default function Navbar({ children }) {
   const menuRef = useRef(null);
+  const location = useLocation();
   const [handleCollapse, setHandleCollapse] = useState(false);
-  const handleMenuButton = () => {
-    if (menuRef.current) {
-      menuRef.current.checked = false;
-    }
-  };
+
   const navOptions = (
     <>
       <li>
-        <a>Home</a>
+        <HashLink to="/#">Home</HashLink>
       </li>
       <li>
         <a
@@ -36,81 +35,81 @@ export default function Navbar({ children }) {
             }`}
           >
             <li>
-              <a
-                href="#"
+              <HashLink
+                to="/Books & Stationery#"
                 className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
               >
                 Books & Stationery
-              </a>
+              </HashLink>
             </li>
             <li>
-              <a
-                href="#"
+              <HashLink
+                to="/Electronics#"
                 className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
               >
                 Electronics
-              </a>
+              </HashLink>
             </li>
             <li>
-              <a
-                href="#"
+              <HashLink
+                to="/Fashion#"
                 className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
               >
                 Fashion
-              </a>
+              </HashLink>
             </li>
             <li>
-              <a
-                href="#"
+              <HashLink
+                to="/Groceries#"
                 className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
               >
                 Groceries
-              </a>
+              </HashLink>
             </li>
             <li>
-              <a
-                href="#"
+              <HashLink
+                to="/Health & Beauty#"
                 className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
               >
                 Health & Beauty
-              </a>
+              </HashLink>
             </li>
             <li>
-              <a
-                href="#"
+              <HashLink
+                to="/Home & Living#"
                 className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
               >
                 Home & Living
-              </a>
+              </HashLink>
             </li>
             <li>
-              <a
-                href="#"
+              <HashLink
+                to="/Sports & Outdoors#"
                 className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
               >
                 Sports & Outdoors
-              </a>
+              </HashLink>
             </li>
             <li>
-              <a
-                href="#"
+              <HashLink
+                to="/Toys & Kids#"
                 className="block px-4 py-2 hover:bg-gray-500 hover:text-white"
               >
                 Toys & Kids
-              </a>
+              </HashLink>
             </li>
           </ul>
         </>
       </li>
 
       <li>
-        <a>Flash Sale</a>
+        <HashLink to="/#">Flash Sale</HashLink>
       </li>
       <li>
-        <a>About Us</a>
+        <HashLink to="/#">About Us</HashLink>
       </li>
       <li>
-        <a>Contact Us</a>
+        <HashLink to="/#">Contact Us</HashLink>
       </li>
     </>
   );
@@ -133,6 +132,17 @@ export default function Navbar({ children }) {
       </li>
     </>
   );
+  const handleMenuButton = () => {
+    if (menuRef.current) {
+      menuRef.current.checked = false;
+    }
+  };
+
+  useEffect(() => {
+    if (menuRef.current) {
+      menuRef.current.checked = false;
+    }
+  }, [location.pathname]);
   return (
     <div className="drawer">
       <input
@@ -165,9 +175,9 @@ export default function Navbar({ children }) {
               </ul>
             </div>
             <div className="navbar-end xl:gap-8 lg:gap-8 md:gap-6 sm:gap-5 gap-4">
-              <div>
+              {/* <div>
                 <BiSupport className="text-gray-600 xl:text-3xl lg:text-3xl md:text-2xl sm:text-xl text-lg" />
-              </div>
+              </div> */}
               <div>
                 <div className="indicator">
                   <IoNotifications className="mt-1 text-gray-600 xl:text-2xl lg:text-2xl md:text-xl sm:text-lg text-base" />

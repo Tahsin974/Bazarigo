@@ -1,5 +1,47 @@
+import { useEffect, useState } from "react";
 import "./FlashSaleSection.css";
 export default function FlashSaleSection() {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    // Check if we already saved a targetDate
+    let savedTarget = localStorage.getItem("flashSaleEnd");
+    let targetDate;
+
+    if (savedTarget) {
+      targetDate = new Date(savedTarget).getTime();
+    } else {
+      // Example: countdown runs for 1 day (24h) from first visit
+      targetDate = new Date().getTime() + 48 * 60 * 60 * 1000;
+      localStorage.setItem("flashSaleEnd", new Date(targetDate).toISOString());
+    }
+
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance <= 0) {
+        clearInterval(interval);
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      } else {
+        setTimeLeft({
+          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+          hours: Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          ),
+          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((distance % (1000 * 60)) / 1000),
+        });
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <>
       <section className="flex justify-center items-center bgGradientRed text-white wrapper xl:my-16 lg:my-16 md:my-15 sm:my-14 my-12 xl:py-8 lg:py-8 md:py-6 py-3">
@@ -26,8 +68,11 @@ export default function FlashSaleSection() {
             >
               <div className="flex flex-col xl:py-3 xl:px-5  lg:py-3 lg:px-5  md:py-2 md:px-3 py-1 px-2 bg-[#FFF5EE] rounded-box text-[#FF4C4C]">
                 <span className="countdown font-mono text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
-                  <span style={{ "--value": 0 }} aria-label="0 days">
-                    0
+                  <span
+                    style={{ "--value": timeLeft.days }}
+                    aria-label="0 days"
+                  >
+                    {timeLeft.days}
                   </span>
                 </span>
                 <span className="text-sm sm:text-base md:text-base lg:text-lg xl:text-lg">
@@ -36,8 +81,11 @@ export default function FlashSaleSection() {
               </div>
               <div className="flex flex-col xl:py-3 xl:px-5  lg:py-3 lg:px-5  md:py-2 md:px-3 py-1 px-2 bg-[#FFF5EE] rounded-box text-[#FF4C4C]">
                 <span className="countdown font-mono text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
-                  <span style={{ "--value": 10 }} aria-label="10 hours">
-                    10
+                  <span
+                    style={{ "--value": timeLeft.hours }}
+                    aria-label="10 hours"
+                  >
+                    {timeLeft.hours}
                   </span>
                 </span>
                 <span className="text-sm sm:text-base md:text-base lg:text-lg xl:text-lg">
@@ -46,8 +94,11 @@ export default function FlashSaleSection() {
               </div>
               <div className="flex flex-col xl:py-3 xl:px-5  lg:py-3 lg:px-5  md:py-2 md:px-3 py-1 px-2 bg-[#FFF5EE] rounded-box text-[#FF4C4C]">
                 <span className="countdown font-mono text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
-                  <span style={{ "--value": 24 }} aria-label="24 minutes">
-                    24
+                  <span
+                    style={{ "--value": timeLeft.minutes }}
+                    aria-label="24 minutes"
+                  >
+                    {timeLeft.minutes}
                   </span>
                 </span>
                 <span className="text-sm sm:text-base md:text-base lg:text-lg xl:text-lg">
@@ -56,8 +107,11 @@ export default function FlashSaleSection() {
               </div>
               <div className="flex flex-col xl:py-3 xl:px-5  lg:py-3 lg:px-5  md:py-2 md:px-3 py-1 px-2 bg-[#FFF5EE] rounded-box text-[#E62156]">
                 <span className="countdown font-mono text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
-                  <span style={{ "--value": 59 }} aria-label="59 seconds">
-                    59
+                  <span
+                    style={{ "--value": timeLeft.seconds }}
+                    aria-label="59 seconds"
+                  >
+                    {timeLeft.seconds}
                   </span>
                 </span>
                 <span className="text-sm sm:text-base md:text-base lg:text-lg xl:text-lg">

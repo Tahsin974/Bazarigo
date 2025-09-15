@@ -5,6 +5,9 @@ import youtube from "../../../assets/Footer/youtube.png";
 import nagad from "../../../assets/payments/nagad.png";
 import bKash from "../../../assets/payments/bkash.png";
 import rocket from "../../../assets/payments/rocket.jpeg";
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdOutlineMailOutline } from "react-icons/md";
+import { IoMdTime } from "react-icons/io";
 
 export default function Footer() {
   return (
@@ -106,13 +109,17 @@ export default function Footer() {
             className="space-y-2 "
           >
             <p className="flex items-center gap-2">
-              📞{" "}
+              <span>
+                <FaPhoneAlt size={15} />
+              </span>{" "}
               <a href="tel:+8801797454118" className="hover:underline">
                 01797-454-118
               </a>
             </p>
             <p className="flex items-center gap-2">
-              ✉{" "}
+              <span>
+                <MdOutlineMailOutline size={18} />
+              </span>{" "}
               <a
                 href="mailto:bazarigo.official@gmail.com"
                 className="hover:underline"
@@ -120,7 +127,14 @@ export default function Footer() {
                 bazarigo.official@gmail.com
               </a>
             </p>
-            <p className="text-sm">🕒 Support Hours: 9 AM – 5 PM (Everyday)</p>
+            <p className=" flex items-center gap-2">
+              <span>
+                <IoMdTime size={18} />
+              </span>{" "}
+              <span className="text-sm">
+                Support Hours: 9 AM – 5 PM (Everyday)
+              </span>
+            </p>
           </div>
 
           <ul

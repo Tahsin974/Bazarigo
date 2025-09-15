@@ -9,7 +9,12 @@ export default function Reviews() {
       {reviews.map((r, idx) => (
         <div key={idx} className="border p-4 rounded-lg bg-white shadow-sm">
           <p className="font-semibold">{r.name}</p>
-          <p className="text-gray-600">{r.text}</p>
+          <p
+            style={{ fontFamily: "Roboto", fontWeight: 400 }}
+            className="text-gray-600"
+          >
+            {r.text}
+          </p>
         </div>
       ))}
     </div>

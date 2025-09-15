@@ -65,15 +65,17 @@ export default function ProductInfo() {
       </div>
 
       {/* Add to Cart */}
-      <button className="bg-blue-600 text-white px-6 py-3 rounded-lg w-full font-semibold hover:bg-blue-700">
-        Add To Cart
-      </button>
-      <button className="bg-blue-600 text-white px-6 py-3 rounded-lg w-full font-semibold hover:bg-blue-700">
-        Buy Now
-      </button>
-      <button className="bg-blue-600 text-white px-6 py-3 rounded-lg w-full font-semibold hover:bg-blue-700">
-        Add To Wishlist
-      </button>
+      <div className="flex items-center gap-4">
+        <button className="bg-[#38b9f5] text-white px-6 py-3 rounded-lg w-full font-semibold hover:bg-[#1c9cd8]">
+          Add To Cart
+        </button>
+        <button className="bg-[#8ad15f] text-white px-6 py-3 rounded-lg w-full font-semibold hover:bg-[#69d128]">
+          Buy Now
+        </button>
+        <button className="bg-[#f0428a] text-white px-6 py-3 rounded-lg w-full font-semibold hover:bg-[#e91a70]">
+          Add To Wishlist
+        </button>
+      </div>
     </div>
   );
 }

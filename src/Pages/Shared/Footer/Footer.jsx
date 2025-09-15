@@ -25,11 +25,11 @@ export default function Footer() {
 
           {/* social links */}
           <div className="flex gap-4 w-[max-context]  ">
-            <a>
+            <a href="https://www.facebook.com/share/16BK5Q6WY5/">
               <img src={facebook} alt="facebook logo" className="h-6 w-6" />
             </a>
 
-            <a>
+            <a href="https://www.instagram.com/bazarigo.online.shop?igsh=bzJxaXZvN3JyaDI1">
               <img src={instagram} alt="instagram logo" className="h-6 w-6" />
             </a>
             <a>

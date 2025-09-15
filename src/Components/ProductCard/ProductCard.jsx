@@ -9,7 +9,7 @@ export default function ProductCard({ product }) {
 
   return (
     <div>
-      <div className="card bg-[#f1f1f7]  hover:shadow-md hover:shadow-[#71c8f0]  p-2 h-[320px] overflow-hidden group">
+      <div className="card bg-[#f1f1f7]  hover:shadow-md hover:shadow-[#71c8f0]  p-2 h-[300px] overflow-hidden group">
         <figure className="overflow-hidden">
           <img
             src={image}
@@ -30,25 +30,19 @@ export default function ProductCard({ product }) {
 
           {originalPrice ? (
             <div className="   mb-1 mt-2 ">
-              <h4 className="text-gray-400 line-through ml-0 flex items-center  text-[clamp(13px,2vw,14px)]  ">
-                <span>
-                  <TbCurrencyTaka />
-                </span>
-                <span>{originalPrice.toLocaleString("en-IN")}</span>
-              </h4>
-
-              <div className="flex items-center gap-2.5 justify-between">
+              <div className="flex items-center gap-2.5 ">
                 <h4 className="bg-gradient-to-r from-[#4cc0ff]  to-[#4679d8] bg-clip-text text-transparent font-bold  text-[clamp(13px,2vw,14px)] flex items-center  ">
                   <span>
                     <TbCurrencyTaka className="text-[#4679d8]" />
                   </span>
                   <span>{price.toLocaleString("en-IN")}</span>
                 </h4>
-                {discount && (
-                  <h5 className="text-[11px] text-green-600 font-medium ">
-                    {discount}% OFF
-                  </h5>
-                )}
+                <h4 className="text-gray-400 line-through ml-0 flex items-center  text-[clamp(13px,2vw,14px)]  ">
+                  <span>
+                    <TbCurrencyTaka />
+                  </span>
+                  <span>{originalPrice.toLocaleString("en-IN")}</span>
+                </h4>
               </div>
             </div>
           ) : (
@@ -67,21 +61,28 @@ export default function ProductCard({ product }) {
           {/* Ratings */}
           <div className="flex items-center justify-between">
             <div className="flex items-center mt-0 gap-1 ">
-              <div
-                className="flex items-center
-            "
-              ></div>
-              <Rating
-                initialRating={rating}
-                emptySymbol={
-                  <IoIosStarOutline className="text-[#f1bb32] text-sm " />
-                }
-                fullSymbol={<IoIosStar className="text-[#f1bb32] text-sm " />}
-                readonly
-              />
-              <span className="text-[12px] text-gray-600 mb-1">
-                ({reviews})
-              </span>
+              <div className="flex items-center ">
+                <div>
+                  <Rating
+                    initialRating={rating}
+                    emptySymbol={
+                      <IoIosStarOutline className="text-[#f1bb32] text-sm " />
+                    }
+                    fullSymbol={
+                      <IoIosStar className="text-[#f1bb32] text-sm " />
+                    }
+                    readonly
+                  />
+                  <span className="text-[12px] text-gray-600 mb-1">
+                    ({reviews})
+                  </span>
+                </div>
+                {discount && (
+                  <h5 className="text-[11px] text-green-600 font-medium xl:ml-8 lg:ml-8 md:ml-8 ml-4 ">
+                    {discount}% OFF
+                  </h5>
+                )}
+              </div>
             </div>
           </div>
         </div>

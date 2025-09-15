@@ -15,12 +15,14 @@ export default function FeaturedProducts({ products }) {
         ))}
       </div>
       <div className="flex xl:justify-end lg:justify-end md:justify-end justify-center  mt-7">
-        <button
-          style={{ fontFamily: "Montserrat", fontWeight: 700 }}
-          className="btn btn-outline  border-[#8ad15f] text-[#8ad15f] hover:bg-[#8ad15f] hover:text-white active:bg-[#8ad15f] active:text-white  btn-xs sm:btn-sm md:btn-md lg:btn-md xl:btn-md shadow-none"
-        >
-          Explore More
-        </button>
+        <HashLink to="/features#">
+          <button
+            style={{ fontFamily: "Montserrat", fontWeight: 700 }}
+            className="btn btn-outline  border-[#8ad15f] text-[#8ad15f] hover:bg-[#69d128] hover:text-white active:bg-[#69d128] active:text-white  btn-xs sm:btn-sm md:btn-md lg:btn-md xl:btn-md shadow-none"
+          >
+            Explore More
+          </button>
+        </HashLink>
       </div>
     </div>
   );

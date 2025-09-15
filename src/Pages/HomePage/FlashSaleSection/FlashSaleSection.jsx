@@ -17,7 +17,7 @@ export default function FlashSaleSection() {
       targetDate = new Date(savedTarget).getTime();
     } else {
       // Example: countdown runs for 1 day (24h) from first visit
-      targetDate = new Date().getTime() + 48 * 60 * 60 * 1000;
+      targetDate = new Date().getTime() + 96 * 60 * 60 * 1000;
       localStorage.setItem("flashSaleEnd", new Date(targetDate).toISOString());
     }
 

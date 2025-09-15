@@ -3,6 +3,7 @@ import MainLayOut from "../LayOut/MainLayOut";
 import HomePage from "../Pages/HomePage/HomeLayOut/HomePage";
 import CategoryPageLayOut from "../Pages/CategoryPage/CategoryPageLayOut";
 import ProductDetailsPage from "../Pages/ProductDetailsPage/ProductDetailsPage";
+import FeaturesPageLayOut from "../Pages/FeaturesPage/FeaturesPageLayOut";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
       {
         path: "/product-details/:productId",
         element: <ProductDetailsPage />,
+      },
+      {
+        path: "/features",
+        element: <FeaturesPageLayOut />,
       },
     ],
   },

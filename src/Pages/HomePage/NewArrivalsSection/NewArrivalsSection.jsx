@@ -12,7 +12,7 @@ export default function NewArrivalsSection() {
       id: 1,
       name: "iPhone 15 Pro Max",
       price: 89999,
-      originalPrice: 105999,
+
       description:
         "Experience the ultimate iPhone with titanium design, A17 Pro chip, and advanced camera system.",
       features: [
@@ -51,7 +51,7 @@ export default function NewArrivalsSection() {
       id: 3,
       name: "MacBook Air M2",
       price: 145000,
-      originalPrice: 165000,
+
       description:
         "Ultra-slim MacBook Air with M2 chip for incredible speed and battery life.",
       features: [

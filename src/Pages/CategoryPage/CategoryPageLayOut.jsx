@@ -1,8 +1,9 @@
 import { useParams } from "react-router";
 import PageTitle from "../../Components/PageTitle/PageTitle";
-import FilterBar from "./FilterBar/FilterBar";
-import SideBar from "./SideBar/SideBar";
+
 import { myCategories } from "../../Data/mockCategories";
+import SideBar from "../../Components/SideBar/SideBar";
+import FilterBar from "../../Components/FilterBar/FilterBar";
 
 export default function CategoryPageLayOut() {
   const { category } = useParams();

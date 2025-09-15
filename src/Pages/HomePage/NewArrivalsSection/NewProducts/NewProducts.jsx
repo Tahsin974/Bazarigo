@@ -83,12 +83,12 @@ export default function NewProducts({ products }) {
                     <div className="card-body text-white ">
                       <h2
                         style={{ fontFamily: "Poppins", fontWeight: 500 }}
-                        className="text-[16px] font-semibold  absolute bottom-14 left-2 w-[170px] truncate"
+                        className="text-[clamp(14px,2vw,16px)] font-semibold  absolute bottom-14 left-2 w-[130px] truncate"
                       >
                         {product.name}
                       </h2>
 
-                      <h5 className=" font-bold text-[16.5px] flex items-center absolute bottom-4.5 left-2">
+                      <h5 className=" font-bold text-[clamp(14px,2vw,16.5px)] flex items-center absolute bottom-4.5 left-2">
                         <TbCurrencyTaka className="text-white" />{" "}
                         {product.price.toLocaleString("en-IN")}
                       </h5>

@@ -8,6 +8,7 @@ import rocket from "../../../assets/payments/rocket.jpeg";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { IoMdTime } from "react-icons/io";
+import { HashLink } from "react-router-hash-link";
 
 export default function Footer() {
   return (
@@ -45,24 +46,24 @@ export default function Footer() {
               Categories
             </h6>
             <li>
-              <a href="#" className="link link-hover">
+              <HashLink to="/Fashion#" className="link link-hover">
                 Fashion
-              </a>
+              </HashLink>
             </li>
             <li>
-              <a href="#" className="link link-hover">
+              <HashLink to="/Electronics#" className="link link-hover">
                 Electronics
-              </a>
+              </HashLink>
             </li>
             <li>
-              <a href="#" className="link link-hover">
+              <HashLink to="/Groceries#" className="link link-hover">
                 Groceries
-              </a>
+              </HashLink>
             </li>
             <li>
-              <a href="#" className="link link-hover">
+              <HashLink to="/Health & Beauty#" className="link link-hover">
                 Health & Beauty
-              </a>
+              </HashLink>
             </li>
           </ul>
         </nav>

@@ -2,7 +2,7 @@ import { IoCloseOutline, IoNotifications, IoSearch } from "react-icons/io5";
 import logo from "../../../assets/Logo/Bazarigo.svg";
 import { FiMenu } from "react-icons/fi";
 import "./Navbar.css";
-import { FaRegUser } from "react-icons/fa";
+import { FaArrowUp, FaRegUser } from "react-icons/fa";
 import { BsCart4 } from "react-icons/bs";
 import { useEffect, useRef, useState } from "react";
 // import { BiSupport } from "react-icons/bi";
@@ -25,7 +25,13 @@ export default function Navbar({ children }) {
           className="flex justify-between items-center cursor-pointer  font-bold hover:bg-gray-200"
         >
           <span>Categories</span>
-          <span className="text-lg">{handleCollapse ? "−" : "+"}</span>
+          <span className="text-lg">
+            {handleCollapse ? (
+              <FaArrowUp className="text-sm text-black" />
+            ) : (
+              <FaArrowUp className="text-sm text-black rotate-180" />
+            )}
+          </span>
         </a>
 
         <>

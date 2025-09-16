@@ -59,10 +59,10 @@ export default function ProductCard({ product }) {
           )}
 
           {/* Ratings */}
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between ">
             <div className="flex items-center mt-0 gap-1 ">
               <div className="flex items-center ">
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-1 w-full">
                   <Rating
                     initialRating={rating}
                     emptySymbol={
@@ -80,8 +80,9 @@ export default function ProductCard({ product }) {
                   </div>
                 </div>
                 {discount && (
-                  <h5 className="text-[11px] text-green-600 font-medium xl:ml-8 lg:ml-8 md:ml-8 ml-4 ">
-                    {discount}% OFF
+                  <h5 className="text-[11px] text-green-600 font-medium xl:ml-8 lg:ml-8 md:ml-8 ml-2 flex gap-0.5">
+                    <span>{discount}%</span>
+                    <span>OFF</span>
                   </h5>
                 )}
               </div>

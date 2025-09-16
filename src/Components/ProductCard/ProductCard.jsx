@@ -66,10 +66,10 @@ export default function ProductCard({ product }) {
                   <Rating
                     initialRating={rating}
                     emptySymbol={
-                      <IoIosStarOutline className="text-[#f1bb32] text-sm " />
+                      <IoIosStarOutline className="text-[#f1bb32] xl:text-sm lg:text-sm md:text-sm sm:text-sm text-[12px] " />
                     }
                     fullSymbol={
-                      <IoIosStar className="text-[#f1bb32] text-sm " />
+                      <IoIosStar className="text-[#f1bb32] xl:text-sm lg:text-sm md:text-sm sm:text-sm text-[12px] " />
                     }
                     readonly
                   />

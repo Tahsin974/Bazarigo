@@ -50,7 +50,7 @@ export default function Categories() {
                 />
                 <h4
                   style={{ fontFamily: "Montserrat", fontWeight: 700 }}
-                  className="text-gray-700 font-bold text-center mt-auto text-[15px]"
+                  className="text-gray-700 font-bold text-center mt-auto xl:text-[15px] lg:text-[15px] md:text-[12px] "
                 >
                   {cat.category}
                 </h4>

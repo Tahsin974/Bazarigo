@@ -62,7 +62,7 @@ export default function ProductCard({ product }) {
           <div className="flex items-center justify-between">
             <div className="flex items-center mt-0 gap-1 ">
               <div className="flex items-center ">
-                <div>
+                <div className="flex items-center gap-1">
                   <Rating
                     initialRating={rating}
                     emptySymbol={
@@ -73,9 +73,11 @@ export default function ProductCard({ product }) {
                     }
                     readonly
                   />
-                  <span className="text-[12px] text-gray-600 mb-1">
-                    ({reviews})
-                  </span>
+                  <div className="mb-1">
+                    <span className="text-[12px] text-gray-600 ">
+                      ({reviews})
+                    </span>
+                  </div>
                 </div>
                 {discount && (
                   <h5 className="text-[11px] text-green-600 font-medium xl:ml-8 lg:ml-8 md:ml-8 ml-4 ">

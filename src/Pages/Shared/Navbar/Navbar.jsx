@@ -122,7 +122,7 @@ export default function Navbar({ children }) {
   const searchBar = (
     <>
       <li>
-        <label className="input rounded-3xl lg:w-xl xl:w-xl md:w-xl  bg-white text-black   border border-black ">
+        <label className="input rounded-3xl xl:w-xl lg:w-xl md:w-[300px] max-w-xl bg-white text-black   border border-black ">
           <input
             type="search"
             className="grow "
@@ -165,7 +165,7 @@ export default function Navbar({ children }) {
               <label
                 htmlFor="my-drawer-3"
                 aria-label="open sidebar"
-                className="btn border-white shadow-none bg-white text-black lg:hidden "
+                className="btn border-white shadow-none bg-white text-black xl:hidden lg:hidden md:hidden "
               >
                 <FiMenu />
               </label>
@@ -175,7 +175,7 @@ export default function Navbar({ children }) {
                 </Link>
               </figure>
             </div>
-            <div className="navbar-center hidden xl:flex lg:flex">
+            <div className="navbar-center hidden xl:flex lg:flex md:flex">
               <ul className="menu menu-horizontal px-1 space-x-1.5 items-center ">
                 {searchBar}
               </ul>

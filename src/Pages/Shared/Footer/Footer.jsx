@@ -104,7 +104,26 @@ export default function Footer() {
           >
             Customer Service
           </h6>
-
+          <ul
+            style={{ fontFamily: "Roboto", fontWeight: 400 }}
+            className="mb-4 space-y-2 "
+          >
+            <li>
+              <a href="#" className="link link-hover">
+                Returns & Refunds
+              </a>
+            </li>
+            <li>
+              <a href="#" className="link link-hover">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="#" className="link link-hover">
+                Terms & Conditions
+              </a>
+            </li>
+          </ul>
           <div
             style={{ fontFamily: "Roboto", fontWeight: 400 }}
             className="space-y-2 "
@@ -137,28 +156,6 @@ export default function Footer() {
               </span>
             </p>
           </div>
-
-          <ul
-            style={{ fontFamily: "Roboto", fontWeight: 400 }}
-            className="mt-4 space-y-2 "
-          >
-            <li>
-              <a href="#" className="link link-hover">
-                Returns & Refunds
-              </a>
-            </li>
-            <li>
-              <a href="#" className="link link-hover">
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a href="#" className="link link-hover">
-                Terms & Conditions
-              </a>
-            </li>
-          </ul>
-
           <div className="mt-4">
             <p
               style={{ fontFamily: "Montserrat", fontWeight: 700 }}

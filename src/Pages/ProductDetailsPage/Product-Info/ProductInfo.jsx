@@ -65,7 +65,7 @@ export default function ProductInfo() {
       </div>
 
       {/* Add to Cart */}
-      <div className="flex items-center gap-4">
+      <div className="xl:flex lg:flex md:flex items-center gap-4">
         <button className="bg-[#38b9f5] text-white px-6 py-3 rounded-lg w-full font-semibold hover:bg-[#1c9cd8]">
           Add To Cart
         </button>
